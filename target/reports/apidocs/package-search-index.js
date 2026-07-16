@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.mycompany.cafe.dao"},{"l":"com.mycompany.cafe.model"},{"l":"com.mycompany.cafe.util"},{"l":"com.mycompany.cafe.web"}];updateSearchResults();

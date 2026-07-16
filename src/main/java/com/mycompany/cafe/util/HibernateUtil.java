@@ -17,7 +17,10 @@ public class HibernateUtil {
                     .buildSessionFactory();
 
         } catch (HibernateException ex) {
-    System.err.println("Error al crear SessionFactory.");
+ System.out.println("====================================");
+    System.out.println("ERROR AL CREAR SESSION FACTORY");
+    System.out.println("====================================");
+
     throw new ExceptionInInitializerError(ex);
         }
         

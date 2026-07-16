@@ -31,7 +31,7 @@
 
         <property name="hibernate.format_sql">true</property>
 
-        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
 
         <mapping class="com.mycompany.cafe.model.Usuario"/>
 
