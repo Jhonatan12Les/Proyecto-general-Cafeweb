@@ -1,7 +1,10 @@
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\dao\UsuarioDAO.java
+C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\model\ItemCarrito.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\model\Usuario.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\util\Conexion.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\util\HibernateUtil.java
+C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\CarritoServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\LoginServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\LogoutServlet.java
+C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\PedidoServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\RegistroServlet.java

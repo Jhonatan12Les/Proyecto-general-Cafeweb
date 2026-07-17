@@ -266,3 +266,58 @@ body {
     font-size: 1.6rem;
   }
 }
+
+/* ===== Icono del carrito ===== */
+
+.carrito-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #f1e4d8;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.carrito-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.carrito-contador {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--color-acento);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.carrito-contador.animar {
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+.carrito-link.bounce {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-5px) rotate(-8deg); }
+  50%  { transform: translateY(0) rotate(8deg); }
+  75%  { transform: translateY(-2px) rotate(-4deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}

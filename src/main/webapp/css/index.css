@@ -112,3 +112,102 @@
   color: var(--color-marron);
   font-size: 0.95rem;
 }
+
+/* ===== Icono del carrito ===== */
+
+.carrito-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--color-crema);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.carrito-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.carrito-contador {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-acento);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.carrito-contador.animar {
+  animation: pop 0.35s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+.carrito-link.bounce {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-5px) rotate(-8deg); }
+  50%  { transform: translateY(0) rotate(8deg); }
+  75%  { transform: translateY(-2px) rotate(-4deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ===== Info y botón "Agregar al carrito" en el catálogo ===== */
+
+.producto-card .info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.producto-card .info h3 {
+  font-size: 1rem;
+  color: var(--color-texto);
+}
+
+.producto-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.producto-card .btn-agregar {
+  background-color: var(--color-crema);
+  color: var(--color-marron-oscuro);
+  border: 1px solid var(--color-caramelo);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.producto-card .btn-agregar:hover {
+  background-color: var(--color-caramelo);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.producto-card .btn-agregar:active {
+  transform: translateY(0);
+}
+
