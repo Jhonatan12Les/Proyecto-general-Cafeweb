@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar contraseña - Café© Jhona</title>
+    <title>Recuperar contraseña - Café Jhona</title>
 
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/recover.css">
 </head>
 <body>
 
     <a href="../index.jsp" class="btn-home">
-        Café© Jhona
+        Café Jhona
     </a>
 
-    <div class="login-container">
+    <div class="auth-container">
 
-        <div class="login-box">
+        <div class="auth-card">
 
-            <h1 class="titulo">
-                Recuperar contraseña
-            </h1>
+            <div class="brand-badge">CJ</div>
+
+            <h1>Recuperar contraseña</h1>
 
             <p class="descripcion">
                 Ingresa tu correo electrónico vinculado a tu cuenta y te enviaremos un enlace para restablecer tu contraseña.
@@ -28,10 +29,7 @@
             <form>
 
                 <div class="input-group">
-                    <label for="correo">
-                        Correo electrónico
-                    </label>
-
+                    <label for="correo">Correo electrónico</label>
                     <input
                         type="email"
                         id="correo"
