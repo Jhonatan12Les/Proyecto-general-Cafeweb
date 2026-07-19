@@ -1,3 +1,15 @@
+<%
+    String mensaje = (String) session.getAttribute("mensajeRecuperacion");
+    String error = (String) session.getAttribute("errorToken");
+
+    if (mensaje != null) {
+        session.removeAttribute("mensajeRecuperacion");
+    }
+
+    if (error != null) {
+        session.removeAttribute("errorToken");
+    }
+%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,7 +38,15 @@
                 Ingresa tu correo electrónico vinculado a tu cuenta y te enviaremos un enlace para restablecer tu contraseña.
             </p>
 
-            <form>
+            <% if (mensaje != null) { %>
+                <div class="aviso-exito"><%= mensaje %></div>
+            <% } %>
+
+            <% if (error != null) { %>
+                <div class="aviso-error"><%= error %></div>
+            <% } %>
+
+            <form action="${pageContext.request.contextPath}/RecoverServlet" method="post">
 
                 <div class="input-group">
                     <label for="correo">Correo electrónico</label>

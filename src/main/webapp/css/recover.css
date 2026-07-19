@@ -97,3 +97,23 @@
 .extra-links a:hover {
   text-decoration: underline;
 }
+
+.aviso-exito {
+  background-color: #e6f4ea;
+  border: 1px solid #b6e2c1;
+  color: #256a3a;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.aviso-error {
+  background-color: #fdecea;
+  border: 1px solid #f5c6c2;
+  color: #c62828;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+}

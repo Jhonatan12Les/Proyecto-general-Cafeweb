@@ -3,8 +3,11 @@ C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\my
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\model\Usuario.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\util\Conexion.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\util\HibernateUtil.java
+C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\util\MailUtil.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\CarritoServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\LoginServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\LogoutServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\PedidoServlet.java
+C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\RecoverServlet.java
 C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\RegistroServlet.java
+C:\Users\lorma\OneDrive\Documents\NetBeansProjects\cafe-web\src\main\java\com\mycompany\cafe\web\ResetPasswordServlet.java
