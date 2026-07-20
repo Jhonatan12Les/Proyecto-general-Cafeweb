@@ -16,32 +16,29 @@ import jakarta.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response)
-            throws ServletException, IOException {
+  protected void doPost(HttpServletRequest request,
+                      HttpServletResponse response)
+        throws ServletException, IOException {
 
-        // Recibir datos del formulario
-        String correo = request.getParameter("correo");
-        String password = request.getParameter("password");
+    String correo = request.getParameter("correo");
+    String password = request.getParameter("password");
 
-        // Consultar base de datos
-        UsuarioDAO dao = new UsuarioDAO();
-        Usuario usuario = dao.iniciarSesion(correo, password);
+    UsuarioDAO dao = new UsuarioDAO();
+    Usuario usuario = dao.iniciarSesion(correo, password);
 
-        if (usuario != null) {
+    if (usuario != null) {
 
-            // Crear la sesión
-            HttpSession sesion = request.getSession();
-            sesion.setAttribute("usuario", usuario);
+        HttpSession sesion = request.getSession();
+        sesion.setAttribute("usuario", usuario);
 
-            // Redireccionar al inicio
-            response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
+        response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
 
-        } else {
+    } else {
 
-            // Usuario o contraseña incorrectos
-            response.getWriter().println("Correo o contraseña incorrectos.");
+        HttpSession sesion = request.getSession();
+        sesion.setAttribute("errorLogin", "Correo o contraseña incorrectos.");
 
-        }
+        response.sendRedirect(request.getContextPath() + "/views/login.jsp");
+    }
     }
 }
