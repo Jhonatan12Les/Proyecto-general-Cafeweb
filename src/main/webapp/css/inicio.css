@@ -45,9 +45,10 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
-
 .dashboard-navbar nav a {
   color: #f1e4d8;
   text-decoration: none;
@@ -262,8 +263,33 @@ body {
     padding: 1rem;
   }
 
+  .dashboard-navbar nav ul {
+    gap: 0.7rem;
+  }
+
+  .user-chip span {
+    display: none;
+  }
+
   .bienvenida h1 {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .dashboard-navbar nav ul {
+    width: 100%;
+  }
+
+  .btn-logout {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .user-chip {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -284,8 +310,8 @@ body {
 }
 
 .carrito-contador {
-  position: absolute;
-  top: -2px;
+  position: relative;
+  top: -10px;
   right: -2px;
   background-color: var(--color-acento);
   color: #fff;
