@@ -14,15 +14,25 @@ import jakarta.servlet.http.HttpSession;
 public class PedidoServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
 
-        HttpSession sesion = request.getSession();
+    HttpSession sesion = request.getSession();
 
-        // Marca el pedido como confirmado y vacia el carrito actual
-        sesion.setAttribute("pedidoConfirmado", true);
-        sesion.setAttribute("carrito", new ArrayList<>());
+    // Si no hay un usuario autenticado, no se puede confirmar el pedido
+    if (sesion.getAttribute("usuario") == null) {
 
-        response.sendRedirect(request.getContextPath() + "/views/carrito.jsp");
+        // Guardamos a donde debe volver una vez inicie sesion
+        sesion.setAttribute("redirectDespuesLogin", request.getContextPath() + "/views/carrito.jsp");
+
+        response.sendRedirect(request.getContextPath() + "/views/pedido-requiere-login.jsp");
+        return;
     }
+
+    // Marca el pedido como confirmado y vacia el carrito actual
+    sesion.setAttribute("pedidoConfirmado", true);
+    sesion.setAttribute("carrito", new ArrayList<>());
+
+    response.sendRedirect(request.getContextPath() + "/views/carrito.jsp");
+}
 }

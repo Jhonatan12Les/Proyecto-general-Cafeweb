@@ -1,10 +1,25 @@
+
 <%
     String errorLogin = (String) session.getAttribute("errorLogin");
+    String mensajeLoginRequerido = (String) session.getAttribute("mensajeLoginRequerido");
 
     if (errorLogin != null) {
         session.removeAttribute("errorLogin");
     }
+
+    if (mensajeLoginRequerido != null) {
+        session.removeAttribute("mensajeLoginRequerido");
+    }
 %>
+
+<% if (mensajeLoginRequerido != null) { %>
+    <div class="info-message"><%= mensajeLoginRequerido %></div>
+<% } %>
+
+<% if (errorLogin != null) { %>
+    <div class="error-message"><%= errorLogin %></div>
+<% } %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -15,8 +15,8 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
-    @Override
-  protected void doPost(HttpServletRequest request,
+   @Override
+protected void doPost(HttpServletRequest request,
                       HttpServletResponse response)
         throws ServletException, IOException {
 
@@ -26,19 +26,26 @@ public class LoginServlet extends HttpServlet {
     UsuarioDAO dao = new UsuarioDAO();
     Usuario usuario = dao.iniciarSesion(correo, password);
 
+    HttpSession sesion = request.getSession();
+
     if (usuario != null) {
 
-        HttpSession sesion = request.getSession();
         sesion.setAttribute("usuario", usuario);
 
-        response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
+        // Si venia de un intento de pedido sin sesion, lo regresamos ahi
+        String destino = (String) sesion.getAttribute("redirectDespuesLogin");
+
+        if (destino != null) {
+            sesion.removeAttribute("redirectDespuesLogin");
+            response.sendRedirect(destino);
+        } else {
+            response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
+        }
 
     } else {
 
-        HttpSession sesion = request.getSession();
         sesion.setAttribute("errorLogin", "Correo o contraseña incorrectos.");
-
         response.sendRedirect(request.getContextPath() + "/views/login.jsp");
     }
-    }
+}
 }
