@@ -1,3 +1,9 @@
+<%
+    if (session.getAttribute("usuario") != null) {
+        response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
+        return;
+    }
+%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
