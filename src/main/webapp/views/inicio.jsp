@@ -86,8 +86,8 @@
                 <div class="producto-card"
                      data-nombre="Croissant artesanal"
                      data-precio="4500"
-                     data-imagen="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80"
+                     data-imagen="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400"
                          alt="Croissant artesanal">
                     <div class="producto-info">
                         <h3>Croissant artesanal</h3>
@@ -116,16 +116,16 @@
                 </div>
 
                 <div class="producto-card"
-                     data-nombre="Pan de bono"
+                     data-nombre="Pan de masa madre"
                      data-precio="2500"
-                     data-imagen="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80"
-                         alt="Pan de bono">
+                     data-imagen="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400">
+                    <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400"
+                         alt="Pan de masa madre">
                     <div class="producto-info">
-                        <h3>Pan de bono</h3>
+                        <h3>Pan de masa madre</h3>
                         <p class="descripcion">Suave, esponjoso y recién horneado.</p>
                         <div class="producto-footer">
-                            <span class="precio">$2.500</span>
+                            <span class="precio">$9.500</span>
                             <button class="btn-agregar">Agregar</button>
                         </div>
                     </div>
