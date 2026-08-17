@@ -12,13 +12,6 @@
     }
 %>
 
-<% if (mensajeLoginRequerido != null) { %>
-    <div class="info-message"><%= mensajeLoginRequerido %></div>
-<% } %>
-
-<% if (errorLogin != null) { %>
-    <div class="error-message"><%= errorLogin %></div>
-<% } %>
 
 <!DOCTYPE html>
 <html lang="es">
