@@ -4,6 +4,7 @@ com\mycompany\cafe\web\LoginServlet.class
 com\mycompany\cafe\util\HibernateUtil.class
 com\mycompany\cafe\dao\UsuarioDAO.class
 com\mycompany\cafe\dao\ProductoDAO.class
+com\mycompany\cafe\web\AdminFilter.class
 com\mycompany\cafe\web\ResetPasswordServlet.class
 com\mycompany\cafe\web\LogoutServlet.class
 com\mycompany\cafe\web\CarritoServlet.class
