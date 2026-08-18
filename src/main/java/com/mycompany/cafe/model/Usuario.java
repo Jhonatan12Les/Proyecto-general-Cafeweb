@@ -43,11 +43,12 @@ public class Usuario {
     @Column(name = "reset_token_expira")
     private Timestamp resetTokenExpira;
 
-    // Constructor vacío
+    @Column(name = "rol")
+    private String rol;
+
     public Usuario() {
     }
 
-    // Constructor con parámetros
     public Usuario(String nombre, String apellido, String cedula,
                    Date fechaNacimiento, String correo, String password) {
 
@@ -58,8 +59,6 @@ public class Usuario {
         this.correo = correo;
         this.password = password;
     }
-
-    // Getters
 
     public int getId() {
         return id;
@@ -97,7 +96,13 @@ public class Usuario {
         return resetTokenExpira;
     }
 
-    // Setters
+    public String getRol() {
+        return rol;
+    }
+
+    public boolean esAdmin() {
+        return "admin".equalsIgnoreCase(rol);
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -133,5 +138,9 @@ public class Usuario {
 
     public void setResetTokenExpira(Timestamp resetTokenExpira) {
         this.resetTokenExpira = resetTokenExpira;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }

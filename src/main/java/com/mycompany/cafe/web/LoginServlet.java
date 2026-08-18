@@ -15,37 +15,41 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
-   @Override
-protected void doPost(HttpServletRequest request,
-                      HttpServletResponse response)
-        throws ServletException, IOException {
+    @Override
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response)
+            throws ServletException, IOException {
 
-    String correo = request.getParameter("correo");
-    String password = request.getParameter("password");
+        String correo = request.getParameter("correo");
+        String password = request.getParameter("password");
 
-    UsuarioDAO dao = new UsuarioDAO();
-    Usuario usuario = dao.iniciarSesion(correo, password);
+        UsuarioDAO dao = new UsuarioDAO();
+        Usuario usuario = dao.iniciarSesion(correo, password);
 
-    HttpSession sesion = request.getSession();
+        HttpSession sesion = request.getSession();
 
-    if (usuario != null) {
+        if (usuario != null) {
 
-        sesion.setAttribute("usuario", usuario);
+            sesion.setAttribute("usuario", usuario);
 
-        // Si venia de un intento de pedido sin sesion, lo regresamos ahi
-        String destino = (String) sesion.getAttribute("redirectDespuesLogin");
 
-        if (destino != null) {
-            sesion.removeAttribute("redirectDespuesLogin");
-            response.sendRedirect(destino);
+            String destino = (String) sesion.getAttribute("redirectDespuesLogin");
+
+            if (destino != null) {
+                sesion.removeAttribute("redirectDespuesLogin");
+                response.sendRedirect(destino);
+            } else if (usuario.esAdmin()) {
+
+                response.sendRedirect(request.getContextPath() + "/AdminServlet");
+            } else {
+ 
+                response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
+            }
+
         } else {
-            response.sendRedirect(request.getContextPath() + "/views/inicio.jsp");
+
+            sesion.setAttribute("errorLogin", "Correo o contraseña incorrectos.");
+            response.sendRedirect(request.getContextPath() + "/views/login.jsp");
         }
-
-    } else {
-
-        sesion.setAttribute("errorLogin", "Correo o contraseña incorrectos.");
-        response.sendRedirect(request.getContextPath() + "/views/login.jsp");
     }
-}
 }

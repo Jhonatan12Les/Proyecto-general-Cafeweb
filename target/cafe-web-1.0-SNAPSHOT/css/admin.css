@@ -1,0 +1,100 @@
+.admin-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.admin-bloque {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(74, 44, 23, 0.08);
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.admin-bloque h2 {
+  color: var(--color-marron-oscuro);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.admin-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-tabla th {
+  text-align: left;
+  background-color: var(--color-crema);
+  color: var(--color-marron-oscuro);
+  padding: 0.7rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.admin-tabla td {
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid #f0e6d8;
+  font-size: 0.9rem;
+}
+
+.badge-rol {
+  background-color: var(--color-caramelo);
+  color: #fff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.form-producto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.form-producto input,
+.form-producto select {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1.5px solid #e7ddd0;
+  font-size: 0.9rem;
+}
+
+.form-producto .btn {
+  grid-column: 1 / -1;
+  width: auto;
+  padding: 0.7rem 1.5rem;
+}
+
+.form-inline {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.input-stock {
+  width: 70px;
+  padding: 0.4rem;
+  border-radius: 8px;
+  border: 1.5px solid #e7ddd0;
+}
+
+.btn-mini {
+  background-color: var(--color-crema);
+  color: var(--color-marron-oscuro);
+  border: 1px solid var(--color-caramelo);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  border-color: #f5c6c2;
+  color: #c62828;
+}
+
+.btn-eliminar:hover {
+  background-color: #fdecea;
+}
